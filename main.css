@@ -1,0 +1,25 @@
+#heading{
+    text-align: center;
+   
+}
+#game{
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    width: 700px;
+    justify-content: center;
+}
+#teams{
+    display:flex;
+    justify-content: center;
+}
+#team1{ 
+    border-style: solid;
+    border-color: black;
+    
+}
+#team2{
+    border-style: solid;
+    border-color: black;
+    
+}
