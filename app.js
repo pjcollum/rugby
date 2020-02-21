@@ -71,23 +71,33 @@ window.onload = function () {
 tryButton1.addEventListener("click", () => {
     console.log(tryPoint);
     console.log("England Try Scored");
-    lastPlay.textContent = "England Try Scored"
+    lastPlay.textContent = `England Try Scored at ${time}`
     currentScore1.textContent = tryPoint                 //5 points for try
     totalScore1.textContent = pointsScored1 += tryPoint //latest score plus 5 try points
 
     tryButton1.disabled = true
+    tryButton1.style.cssText = "background-color: lightgrey"
     conversionButton1.disabled = false
+    conversionButton1.style.cssText = 'background-color: white';
     conversionMissedButton1.disabled = false
+    conversionMissedButton1.style.cssText = 'background-color: white';
     penaltyButton1.disabled = true
+    penaltyButton1.style.cssText = "background-color: lightgrey"
     dropGoalButton1.disabled = true
+    dropGoalButton1.style.cssText = "background-color: lightgrey"
 
     tryButton2.disabled = true
+    tryButton2.style.cssText = "background-color: lightgrey"
     conversionButton2.disabled = true
+    conversionButton2.style.cssText = "background-color: lightgrey"
     conversionMissedButton2.disabled = true
+    conversionMissedButton2.style.cssText = "background-color: lightgrey"
     penaltyButton2.disabled = true
+    penaltyButton2.style.cssText = "background-color: lightgrey"
     dropGoalButton2.disabled = true
+    dropGoalButton2.style.cssText = "background-color: lightgrey"
 
-    //pause the clock
+    
 })
 
 
@@ -99,31 +109,51 @@ conversionButton1.addEventListener("click", () => {
     totalScore1.textContent = pointsScored1 += conversionPoint
 
     tryButton1.disabled = false
+    tryButton1.style.cssText = "background-color: white"
     conversionButton1.disabled = true
+    conversionButton1.style.cssText = 'background-color: lightgrey';
     conversionMissedButton1.disabled = true
+    conversionMissedButton1.style.cssText = 'background-color: lightgrey';
     penaltyButton1.disabled = false
+    penaltyButton1.style.cssText = "background-color: white"
     dropGoalButton1.disabled = false
+    dropGoalButton1.style.cssText = "background-color: white"
 
     tryButton2.disabled = false
+    tryButton2.style.cssText = "background-color: white"
     conversionButton2.disabled = true
+    conversionButton2.style.cssText = "background-color: lightgrey"
     conversionMissedButton2.disabled = true
+    conversionMissedButton2.style.cssText = "background-color: lightgrey"
     penaltyButton2.disabled = false
+    penaltyButton2.style.cssText = "background-color: white"
     dropGoalButton2.disabled = false
+    dropGoalButton2.style.cssText = "background-color: white"
 })
 conversionMissedButton1.addEventListener("click", () => {
     console.log("England Conversion Missed");
     lastPlay.textContent = "England Conversion Missed";
     tryButton1.disabled = false
+    tryButton1.style.cssText = "background-color: white"
     conversionButton1.disabled = true
+    conversionButton1.style.cssText = 'background-color: lightgrey';
     conversionMissedButton1.disabled = true
+    conversionMissedButton1.style.cssText = 'background-color: lightgrey';
     penaltyButton1.disabled = false
+    penaltyButton1.style.cssText = "background-color: white"
     dropGoalButton1.disabled = false
+    dropGoalButton1.style.cssText = "background-color: white"
 
     tryButton2.disabled = false
+    tryButton2.style.cssText = "background-color: white"
     conversionButton2.disabled = true
+    conversionButton2.style.cssText = "background-color: white"
     conversionMissedButton2.disabled = true
+    conversionMissedButton2.style.cssText = "background-color: white"
     penaltyButton2.disabled = false
+    penaltyButton2.style.cssText = "background-color: white"
     dropGoalButton2.disabled = false
+    dropGoalButton2.style.cssText = "background-color: white"
 })
 penaltyButton1.addEventListener("click", () => {
     console.log(penaltyPoint);
@@ -151,16 +181,26 @@ tryButton2.addEventListener("click", () => {
     totalScore2.textContent = pointsScored2 += tryPoint //latest score plus 5 try points
 
     tryButton2.disabled = true
+    tryButton2.style.cssText = 'background-color: lightgrey';
     conversionButton2.disabled = false
+    conversionButton2.style.cssText = 'background-color: white';
     conversionMissedButton2.disabled = false
+    conversionMissedButton2.style.cssText = 'background-color: white';
     penaltyButton2.disabled = true
+    penaltyButton2.style.cssText = 'background-color: lightgrey';
     dropGoalButton2.disabled = true
+    dropGoalButton2.style.cssText = 'background-color: lightgrey';
 
     tryButton1.disabled = true
+    tryButton1.style.cssText = 'background-color: lightgrey';
     conversionButton1.disabled = true
+    conversionButton1.style.cssText = 'background-color: lightgrey';
     conversionMissedButton1.disabled = true
+    conversionMissedButton1.style.cssText = 'background-color: lightgrey';
     penaltyButton1.disabled = true
+    penaltyButton1.style.cssText = 'background-color: lightgrey';
     dropGoalButton1.disabled = true
+    dropGoalButton1.style.cssText = 'background-color: lightgrey';
 
 })
 conversionButton2.addEventListener("click", () => {
@@ -171,31 +211,51 @@ conversionButton2.addEventListener("click", () => {
     totalScore2.textContent = pointsScored2 += conversionPoint
 
     tryButton2.disabled = false
+    tryButton2.style.cssText = 'background-color: white';
     conversionButton2.disabled = true
+    conversionButton2.style.cssText = 'background-color: lightgrey';
     conversionMissedButton2.disabled = true
+    conversionMissedButton2.style.cssText = 'background-color: lightgrey';
     penaltyButton2.disabled = false
+    penaltyButton2.style.cssText = 'background-color: white';
     dropGoalButton2.disabled = false
+    dropGoalButton2.style.cssText = 'background-color: white';
 
     tryButton1.disabled = false
+    tryButton1.style.cssText = 'background-color: white';
     conversionButton1.disabled = true
+    conversionButton1.style.cssText = 'background-color: lightgrey';
     conversionMissedButton1.disabled = true
+    conversionMissedButton1.style.cssText = 'background-color: lightgrey';
     penaltyButton1.disabled = false
+    penaltyButton1.style.cssText = 'background-color: white';
     dropGoalButton1.disabled = false
+    dropGoalButton1.style.cssText = 'background-color: white';
 })
 conversionMissedButton2.addEventListener("click", () => {
     console.log("Wales Conversion Missed");
     lastPlay.textContent = "Wales Conversion Missed";
     tryButton2.disabled = false
+    tryButton2.style.cssText = 'background-color: white';
     conversionButton2.disabled = true
+    conversionButton2.style.cssText = 'background-color: lightgrey';
     conversionMissedButton2.disabled = true
+    conversionMissedButton2.style.cssText = 'background-color: lightgrey';
     penaltyButton2.disabled = false
+    penaltyButton2.style.cssText = 'background-color: white';
     dropGoalButton2.disabled = false
+    dropGoalButton2.style.cssText = 'background-color: white';
 
     tryButton1.disabled = false
-    conversionButton1.disabled = true
+    tryButton1.style.cssText = 'background-color: white';
+    conversionButton1.disabled = false
+    conversionButton1.style.cssText = 'background-color: lightgrey';
     conversionMissedButton1.disabled = true
+    conversionMissedButton1.style.cssText = 'background-color: lightgrey';
     penaltyButton1.disabled = false
+    penaltyButton1.style.cssText = 'background-color: white';
     dropGoalButton1.disabled = false
+    dropGoalButton1.style.cssText = 'background-color: white';
 })
 penaltyButton2.addEventListener("click", () => {
     console.log("Wales Penalty Scored");
