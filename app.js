@@ -71,7 +71,7 @@ window.onload = function () {
 tryButton1.addEventListener("click", () => {
     console.log(tryPoint);
     console.log("England Try Scored");
-    lastPlay.textContent = `England Try Scored at ${time}`
+    lastPlay.textContent = "England Try Scored"  //attempting to add time
     currentScore1.textContent = tryPoint                 //5 points for try
     totalScore1.textContent = pointsScored1 += tryPoint //latest score plus 5 try points
 
@@ -282,16 +282,26 @@ resetBtn.addEventListener("click", () => {
     pointsScored2 = 0
 
     tryButton1.disabled = false
+    tryButton1.style.cssText = "background-color: white"
     conversionButton1.disabled = true
+    conversionButton1.style.cssText = 'background-color: lightgrey';
     conversionMissedButton1.disabled = true
+    conversionMissedButton1.style.cssText = 'background-color: lightgrey';
     penaltyButton1.disabled = false
+    penaltyButton1.style.cssText = "background-color: white"
     dropGoalButton1.disabled = false
+    dropGoalButton1.style.cssText = "background-color: white"
 
     tryButton2.disabled = false
+    tryButton2.style.cssText = "background-color: white"
     conversionButton2.disabled = true
+    conversionButton2.style.cssText = "background-color: lightgrey"
     conversionMissedButton2.disabled = true
+    conversionMissedButton2.style.cssText = "background-color: lightgrey"
     penaltyButton2.disabled = false
+    penaltyButton2.style.cssText = "background-color: white"
     dropGoalButton2.disabled = false
+    dropGoalButton2.style.cssText = "background-color: white"
 
     lastPlay.textContent = ""
 
