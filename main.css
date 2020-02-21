@@ -2,12 +2,18 @@
     text-align: center;
    
 }
+#container{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center
+}
 #game{
     text-align: center;
     border-style: solid;
     border-color: black;
-    width: 700px;
-    justify-content: center;
+    padding-right:20px;
+    padding-left:20px;
 }
 #teams{
     display:flex;
@@ -16,10 +22,12 @@
 #team1{ 
     border-style: solid;
     border-color: black;
+    margin-right:10px;
+    padding-bottom:10px;
     
 }
 #team2{
-    border-style: solid;
-    border-color: black;
-    
+border-style: solid;
+border-color: black;
+padding-bottom:10px;
 }

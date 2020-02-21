@@ -5,56 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Rugby</title>
+    <link rel='icon' href='./images/favicon.jpeg' type=''>
+    <title>Rugby Scoreboard</title>
 </head>
 
 <body>
-    <div id='game'>
-        <div id='heading'>
-            <h1>Rugby Game</h1>
-            <h3>Time: <span id='time'></span></h3>
-            
-        </div>
-        <div id="teams">
-            <div id='team 1'>
-            <h1>England</h1>
-            <img src="./images/england.jpg" alt="England Flag" height="100" width="200">
-    
-            <p>Last Point Scored was: <span id='currentScore1'></span></p>
-            <h3>Score: <span id='totalScore1'></span></h3>
-            
+    <div id="container">
+        <div id='game'>
+            <div id='heading'>
+                <h1>Rugby Game</h1>
+                <h3>Time: <span id='time'></span></h3>
 
-            <button id="try1"> Try</button>
-            <button id="conversion1"> Conversion</button>
+                <h4>Last Play: <span id='lastPlay'></span></h4>
 
-            <!-- <button id="conversionMissed"> Conversion Missed</button> -->
-
-            <button id="penalty1"> Penalty</button>
-            <button id="dropGoal1"> Drop Goal</button><br>
-
-            <button id="resetBtn1"> Reset</button><br>
             </div>
-        <div id='team 2'>
-            <h1>Wales</h1>
-            <img src="./images/wales.png" alt="Wales Flag" height="100" width="200">
-    
-            <p>Last Point Scored was: <span id='currentScore2'></span></p>
-            <h3>Score: <span id='totalScore2'></span></h3>
-           
-            <button id="try2"> Try</button>
-            <button id="conversion2"> Conversion</button>
+            <div id="teams">
+                <div id='team1'>
+                    <h1>England</h1>
+                    <img src="./images/england.jpg" alt="England Flag" height="100" width="200">
 
-            <!-- <button id="conversionMissed"> Conversion Missed</button> -->
+                    <p>Last Point Scored was: <span id='currentScore1'></span></p>
+                    <h3>Score: <span id='totalScore1'></span></h3>
 
-            <button id="penalty2"> Penalty</button>
-            <button id="dropGoal2"> Drop Goal</button><br>
+                    <button id="try1"> Try</button>
 
-            <button id="resetBtn2"> Reset</button><br>
+                    <button id="conversion1" disabled> Conversion</button>
+                    <button id="conversionMissedButton1" disabled> Conversion Missed</button>
+
+                    <button id="penalty1"> Penalty</button>
+                    <button id="dropGoal1"> Drop Goal</button><br>
+
+
+                </div>
+                <div id='team2'>
+                    <h1>Wales</h1>
+                    <img src="./images/wales.png" alt="Wales Flag" height="100" width="200">
+
+                    <p>Last Point Scored was: <span id='currentScore2'></span></p>
+                    <h3>Score: <span id='totalScore2'></span></h3>
+
+                    <button id="try2"> Try</button>
+                    <button id="conversion2" disabled> Conversion</button>
+                    <button id="conversionMissedButton2" disabled> Conversion Missed</button>
+
+                    <button id="penalty2"> Penalty</button>
+                    <button id="dropGoal2"> Drop Goal</button><br>
+
+
+                </div>
+            </div>
+
+            <button id="resetBtn"> Reset</button><br>
+            <img src="./images/rugby.jpeg" alt="Rugby Pitch" height="300" width="500">
         </div>
-    </div>
-
-
-        <img src="./images/rugby.jpeg" alt="Rugby Pitch" height="300" width="500">
     </div>
 
     <script src="app.js"></script>
