@@ -218,6 +218,9 @@ resetBtn.addEventListener("click", () => {
     currentScore2.textContent = 0
     totalScore2.textContent = 0
 
+    pointsScored1 = 0
+    pointsScored2 = 0
+
     tryButton1.disabled = false
     conversionButton1.disabled = true
     conversionMissedButton1.disabled = true
@@ -230,6 +233,6 @@ resetBtn.addEventListener("click", () => {
     penaltyButton2.disabled = false
     dropGoalButton2.disabled = false
 
-    time = 0
+    lastPlay.textContent = ""
 
 })
