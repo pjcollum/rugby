@@ -42,32 +42,154 @@ let conversionMissedScored3 = 0;
 let penScored3 = 0;
 let dropScored3 = 0;
 
-//Countdown Timer
-function startTimer(duration, display) {                    //80 mins countdown
-    var timer = duration, minutes, seconds;
-    var speed = 1;
+// //Countdown Timer
+// function startTimer(duration, display) {                    //80 mins countdown
+//     var timer = duration, minutes, seconds;
+//     var speed = 1;
 
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+//     setInterval(function () {
+//         minutes = parseInt(timer / 60, 10);
+//         seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+//         minutes = minutes < 10 ? "0" + minutes : minutes;
+//         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+//         display.textContent = minutes + ":" + seconds;
 
-        if (++timer > 4802) {                          //60 secs * 80 mins
-            timer = duration;
-            window.alert("Game Over");
+//         if (++timer > 4800) {                          //60 secs * 80 mins
+//             timer = duration;
+//             window.alert("Game Over");
+//         }
+//     }, 1);
+// }
+
+// window.onload = function () {
+//     var zeroMinutes = 0,
+//         display = document.querySelector('#time');
+//     startTimer(zeroMinutes, display);
+// };
+
+// New Timer
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+
+let displaySeconds = 0;
+let displayMinutes = 0;
+let displayHours = 0;
+
+let interval = null;
+let status = "stopped"
+
+function stopWatch(){
+    seconds++
+
+    if (seconds / 60 ===1){
+        seconds = 0;
+        minutes++
+
+        if (minutes / 60 === 1){
+            minutes = 0;
+            hours++
         }
-    }, 1);
+    }
+        if (seconds < 10){
+            displaySeconds = "0" + seconds.toString();
+        }
+        else{
+            displaySeconds = seconds
+        }
+
+        if (minutes < 10){
+            displayMinutes = "0" + minutes.toString();
+        }
+        else{
+            displayMinutes = minutes
+        }
+        if (hours < 10){
+            displayHours = "0" + hours.toString();
+        }
+        else{
+            displayHours = hours
+        }
+        // if (displayMinutes === 40) {                          //60 secs * 80 mins
+        //        timer = duration;
+        //         window.alert("Half Time");
+        // }
+
+    document.getElementById("display").innerHTML = displayHours + ":" + displayMinutes;
 }
 
-window.onload = function () {
-    var zeroMinutes = 0,
-        display = document.querySelector('#time');
-    startTimer(zeroMinutes, display);
-};
+
+function startStop(){
+    if(status === "stopped" || displayMinutes === 40 || displayMinutes === 80){
+       interval = window.setInterval(stopWatch); //start the stopwatch
+       document.getElementById("startStop").innerHTML = "Stop";
+       status = "started"
+    }
+    else{
+        window.clearInterval(interval);
+        document.getElementById("startStop").innerHTML = "Start";
+        status = "stopped"
+    }
+}
+
+function reset(){
+
+    document.getElementById("display").innerHTML = "00:00:00"
+    document.getElementById("startStop").innerHTML = "Start"
+
+    window.clearInterval(interval);
+    status = "stopped"
+    seconds  = 0
+    minutes  = 0
+    hours  = 0
+
+
+    currentScore1.textContent = 0
+    totalScore1.textContent = 0
+
+    tryScored.textContent = 0
+    tryScored2.textContent = 0
+    conversionScored.textContent = 0
+    conversionScored2.textContent = 0
+    conversionMissedScored.textContent = 0
+    conversionMissedScored2.textContent = 0
+    penScored.textContent = 0
+    penScored2.textContent = 0
+    dropScored.textContent = 0
+    dropScored2.textContent = 0
+
+    currentScore2.textContent = 0
+    totalScore2.textContent = 0
+
+    pointsScored1 = 0
+    pointsScored2 = 0
+
+    tryButton1.disabled = false
+    tryButton1.style.cssText = "background-color: white"
+    conversionButton1.disabled = true
+    conversionButton1.style.cssText = 'background-color: lightgrey';
+    conversionMissedButton1.disabled = true
+    conversionMissedButton1.style.cssText = 'background-color: lightgrey';
+    penaltyButton1.disabled = false
+    penaltyButton1.style.cssText = "background-color: white"
+    dropGoalButton1.disabled = false
+    dropGoalButton1.style.cssText = "background-color: white"
+
+    tryButton2.disabled = false
+    tryButton2.style.cssText = "background-color: white"
+    conversionButton2.disabled = true
+    conversionButton2.style.cssText = "background-color: lightgrey"
+    conversionMissedButton2.disabled = true
+    conversionMissedButton2.style.cssText = "background-color: lightgrey"
+    penaltyButton2.disabled = false
+    penaltyButton2.style.cssText = "background-color: white"
+    dropGoalButton2.disabled = false
+    dropGoalButton2.style.cssText = "background-color: white"
+
+    lastPlay.textContent = ""
+}
 
 //Score button for Team One
 
@@ -302,39 +424,4 @@ dropGoalButton2.addEventListener("click", () => {
 
     dropScored3++
     dropScored2.textContent = `${dropScored3}`
-})
-
-resetBtn.addEventListener("click", () => {
-    currentScore1.textContent = 0
-    totalScore1.textContent = 0
-    currentScore2.textContent = 0
-    totalScore2.textContent = 0
-
-    pointsScored1 = 0
-    pointsScored2 = 0
-
-    tryButton1.disabled = false
-    tryButton1.style.cssText = "background-color: white"
-    conversionButton1.disabled = true
-    conversionButton1.style.cssText = 'background-color: lightgrey';
-    conversionMissedButton1.disabled = true
-    conversionMissedButton1.style.cssText = 'background-color: lightgrey';
-    penaltyButton1.disabled = false
-    penaltyButton1.style.cssText = "background-color: white"
-    dropGoalButton1.disabled = false
-    dropGoalButton1.style.cssText = "background-color: white"
-
-    tryButton2.disabled = false
-    tryButton2.style.cssText = "background-color: white"
-    conversionButton2.disabled = true
-    conversionButton2.style.cssText = "background-color: lightgrey"
-    conversionMissedButton2.disabled = true
-    conversionMissedButton2.style.cssText = "background-color: lightgrey"
-    penaltyButton2.disabled = false
-    penaltyButton2.style.cssText = "background-color: white"
-    dropGoalButton2.disabled = false
-    dropGoalButton2.style.cssText = "background-color: white"
-
-    lastPlay.textContent = ""
-
 })

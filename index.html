@@ -16,7 +16,16 @@
                 <h1 id="title">Rugby Scoreboard</h1>
                 <h3 id='timeFont'><span id='time'></span></h3>
 
+
                 <h4 id="lastPlayFont">Last Play: <span id='lastPlay'></span></h4>
+                    
+                <div id='display'>
+                        00:00
+                </div>
+                <div id="startStopButton">
+                        <button id="startStop" onClick="startStop()">Start</button><button id='reset' onClick="reset()">Reset</button>
+                </div>
+
 
             </div>
             <div id="teams">
@@ -71,13 +80,8 @@
                         </div>
                      </div>
 
-                    
-
-
                 </div>
             </div>
-
-            <button id="resetBtn"> Reset</button><br>
             <img src="./images/rugby.jpeg" alt="Rugby Pitch" height="300" width="500">
         </div>
     </div>

@@ -33,6 +33,7 @@ body{
     padding-right:20px;
     padding-left:20px;
     background-color: lightgrey;
+    margin-top: 50px;
 }
 #teams{
     display:flex;
@@ -77,17 +78,14 @@ button{
   font-family: 'Permanent Marker';   
   cursor: pointer;
 }
+button:hover{
+    box-shadow: 2px 2px;
+}
 #conversion1, #conversionMissedButton1, #conversion2, #conversionMissedButton2{
     background-color: lightgrey;
 }
-button:hover {
-    border-width: 2px;
-  }
-#resetBtn:hover {
-    border-width: 2px;
-  }
    
-#resetBtn{
+#reset{
     background-color: red;
     color:black;
   border: black 0.5px solid;
@@ -102,5 +100,4 @@ button:hover {
   margin-bottom: 20px;
   border-radius: 8px;
   font-family: 'Permanent Marker';
-    
 }
