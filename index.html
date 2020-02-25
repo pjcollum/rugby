@@ -22,34 +22,56 @@
             <div id="teams">
                 <div id='team1'>
                     <h1>England</h1>
+                    <input type="text" id="name" name="name" placeholder="Enter Team Name"><br>
                     <img src="./images/england.jpg" alt="England Flag" height="100" width="200">
 
                     <p>Last Point Scored was: <span id='currentScore1'></span></p>
                     <h3 id="score"><span id='totalScore1'>0</span></h3>
-
-                    <button id="try1"> Try</button>
-
-                    <button id="conversion1" disabled> Conversion</button>
-                    <button id="conversionMissedButton1" disabled> Conversion Missed</button>
-
-                    <button id="penalty1"> Penalty</button>
-                    <button id="dropGoal1"> Drop Goal</button><br>
-
+                    
+                        <div id="buttonDiv">
+                            <div id="top">
+                                <p> Try: <span id="tryScored"> 0</span></p>
+                                <p> Conv: <span id="conversionScored"> 0</span></p>
+                                <p> Conv Missed: <span id="conversionMissedScored"> 0</span></p>
+                                <p> Pen: <span id="penScored"> 0</span></p>
+                                <p> DG: <span id="dropScored"> 0</span></p>
+                            </div>
+                            <div id="bottom">
+                                <button id="try1"> Try</button>
+                                <button id="conversion1" disabled> Conversion</button>
+                                <button id="conversionMissedButton1" disabled> Conversion Missed</button>
+                                <button id="penalty1"> Penalty</button>
+                                <button id="dropGoal1"> Drop Goal</button><br>
+                            </div>
+                         </div>
 
                 </div>
                 <div id='team2'>
                     <h1>Wales</h1>
+                    <input type="text" id="name" name="name" placeholder="Enter Team Name"><br>
                     <img src="./images/wales.png" alt="Wales Flag" height="100" width="200">
 
                     <p>Last Point Scored was: <span id='currentScore2'></span></p>
                     <h3 id="score"><span id='totalScore2'>0</span></h3>
 
-                    <button id="try2"> Try</button>
-                    <button id="conversion2" disabled> Conversion</button>
-                    <button id="conversionMissedButton2" disabled> Conversion Missed</button>
+                    <div id="buttonDiv2">
+                        <div id="top2">
+                            <p> Try: <span id="tryScored2"> 0</span></p>
+                            <p> Conv: <span id="conversionScored2"> 0</span></p>
+                            <p> Conv Missed: <span id="conversionMissedScored2"> 0</span></p>
+                            <p> Pen: <span id="penScored2"> 0</span></p>
+                            <p> DG: <span id="dropScored2"> 0</span></p>
+                        </div>
+                        <div id="bottom2">
+                            <button id="try2"> Try</button>
+                            <button id="conversion2" disabled> Conversion</button>
+                            <button id="conversionMissedButton2" disabled> Conversion Missed</button>
+                            <button id="penalty2"> Penalty</button>
+                            <button id="dropGoal2"> Drop Goal</button><br>
+                        </div>
+                     </div>
 
-                    <button id="penalty2"> Penalty</button>
-                    <button id="dropGoal2"> Drop Goal</button><br>
+                    
 
 
                 </div>

@@ -16,6 +16,12 @@ const dropGoalButton2 = document.getElementById("dropGoal2");
 const totalScore2 = document.getElementById("totalScore2");
 const currentScore2 = document.getElementById("currentScore2");
 
+const tryScored = document.getElementById("tryScored")
+const tryScored2 = document.getElementById("tryScored2")
+const coversionScored = document.getElementById("conversionScored")
+const coversionMissedScored = document.getElementById("conversionMissedScored")
+const penScored = document.getElementById("penScored")
+const dropScored = document.getElementById("dropScored")
 
 let pointsScored1 = 0;
 let pointsScored2 = 0;
@@ -23,6 +29,18 @@ let tryPoint = 5;           //points for the scores
 let conversionPoint = 2;
 let penaltyPoint = 3;
 let dropGoalPoint = 3;
+
+let tryScored1 = 0;
+let conversionScored1 = 0;
+let conversionMissedScored1 = 0;
+let penScored1 = 0;
+let dropScored1 = 0;
+
+let tryScored3= 0;
+let conversionScored3 = 0;
+let conversionMissedScored3 = 0;
+let penScored3 = 0;
+let dropScored3 = 0;
 
 //Countdown Timer
 function startTimer(duration, display) {                    //80 mins countdown
@@ -50,21 +68,6 @@ window.onload = function () {
         display = document.querySelector('#time');
     startTimer(zeroMinutes, display);
 };
-
-//Add for conversion >> Toggle between team one and two
-// let (tryButton1 = false)
-// function enableConv() {
-//     if (tryButton1) {
-//         document.getElementById("conversionButton1").disabled = true;
-//         document.getElementById("conversionMissedButton1").disabled = true;
-//     }else{
-//         document.getElementById("conversionButton1").disabled = false;
-//         document.getElementById("conversionMissedButton1").disabled = false;
-
-//     }
-
-// }
-
 
 //Score button for Team One
 
@@ -97,7 +100,8 @@ tryButton1.addEventListener("click", () => {
     dropGoalButton2.disabled = true
     dropGoalButton2.style.cssText = "background-color: lightgrey"
 
-    
+    tryScored1++
+    tryScored.textContent = `${tryScored1}`
 })
 
 
@@ -129,6 +133,9 @@ conversionButton1.addEventListener("click", () => {
     penaltyButton2.style.cssText = "background-color: white"
     dropGoalButton2.disabled = false
     dropGoalButton2.style.cssText = "background-color: white"
+
+    conversionScored1++
+    conversionScored.textContent = `${conversionScored1}`
 })
 conversionMissedButton1.addEventListener("click", () => {
     console.log("England Conversion Missed");
@@ -154,6 +161,9 @@ conversionMissedButton1.addEventListener("click", () => {
     penaltyButton2.style.cssText = "background-color: white"
     dropGoalButton2.disabled = false
     dropGoalButton2.style.cssText = "background-color: white"
+
+    conversionMissedScored1++
+    conversionMissedScored.textContent = `${conversionMissedScored1}`
 })
 penaltyButton1.addEventListener("click", () => {
     console.log(penaltyPoint);
@@ -161,6 +171,9 @@ penaltyButton1.addEventListener("click", () => {
     lastPlay.textContent = "England Penalty Scored";
     currentScore1.textContent = penaltyPoint
     totalScore1.textContent = pointsScored1 += penaltyPoint
+
+    penScored1++
+    penScored.textContent = `${penScored1}`
 })
 dropGoalButton1.addEventListener("click", () => {
     console.log(dropGoalPoint);
@@ -168,6 +181,10 @@ dropGoalButton1.addEventListener("click", () => {
     lastPlay.textContent = "England Drop Goal Scored";
     currentScore1.textContent = dropGoalPoint
     totalScore1.textContent = pointsScored1 += dropGoalPoint
+
+    dropScored1++
+    dropScored.textContent = `${dropScored1}`
+    
 })
 
 
@@ -202,6 +219,9 @@ tryButton2.addEventListener("click", () => {
     dropGoalButton1.disabled = true
     dropGoalButton1.style.cssText = 'background-color: lightgrey';
 
+    tryScored3++
+    tryScored2.textContent = `${tryScored3}`
+
 })
 conversionButton2.addEventListener("click", () => {
     console.log(conversionPoint);
@@ -231,6 +251,9 @@ conversionButton2.addEventListener("click", () => {
     penaltyButton1.style.cssText = 'background-color: white';
     dropGoalButton1.disabled = false
     dropGoalButton1.style.cssText = 'background-color: white';
+
+    conversionScored3++
+    conversionScored2.textContent = `${conversionScored3}`
 })
 conversionMissedButton2.addEventListener("click", () => {
     console.log("Wales Conversion Missed");
@@ -256,6 +279,9 @@ conversionMissedButton2.addEventListener("click", () => {
     penaltyButton1.style.cssText = 'background-color: white';
     dropGoalButton1.disabled = false
     dropGoalButton1.style.cssText = 'background-color: white';
+
+    conversionMissedScored3++
+    conversionMissedScored2.textContent = `${conversionMissedScored3}`
 })
 penaltyButton2.addEventListener("click", () => {
     console.log("Wales Penalty Scored");
@@ -263,6 +289,9 @@ penaltyButton2.addEventListener("click", () => {
     console.log(penaltyPoint);
     currentScore2.textContent = penaltyPoint
     totalScore2.textContent = pointsScored2 += penaltyPoint
+
+    penScored3++
+    penScored2.textContent = `${penScored3}`
 })
 dropGoalButton2.addEventListener("click", () => {
     console.log(dropGoalPoint);
@@ -270,6 +299,9 @@ dropGoalButton2.addEventListener("click", () => {
     lastPlay.textContent = "Wales Drop Goal Scored";
     currentScore2.textContent = dropGoalPoint
     totalScore2.textContent = pointsScored2 += dropGoalPoint
+
+    dropScored3++
+    dropScored2.textContent = `${dropScored3}`
 })
 
 resetBtn.addEventListener("click", () => {

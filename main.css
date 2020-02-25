@@ -24,14 +24,12 @@ body{
     display:flex;
     justify-content: center;
     align-items:center;
-    
-    
 }
 #game{
     text-align: center;
     border-style: solid;
     border-color: black;
-    border-width:5px;
+    border-width: 5px, 5px, 5px, 5px;
     padding-right:20px;
     padding-left:20px;
     background-color: lightgrey;
@@ -44,7 +42,7 @@ body{
     font-family: 'Orbitron';
     font-size: 30px;
 }
-#team1{ 
+#team1, #team2{ 
     border-style: solid;
     border-color: black;
     border-width: 1px;
@@ -53,15 +51,15 @@ body{
     padding-bottom:10px;
     font-family: 'Graduate'
 }
-#team2{
-border-style: solid;
-border-color: black;
-border-width: 1px;
-border-radius: 8px;
-padding-bottom:10px;
-font-family: 'Graduate'
-}
 
+#buttonDiv, #buttonDiv2{
+    display:inline;
+    margin-left: 10px;
+}
+#top, #top2{
+    display:flex;
+    justify-content: space-around;
+}
 button{
     background-color: white;
     color:black;
