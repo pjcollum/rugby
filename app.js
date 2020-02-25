@@ -136,7 +136,7 @@ function startStop(){
 
 function reset(){
 
-    document.getElementById("display").innerHTML = "00:00:00"
+    document.getElementById("display").innerHTML = "00:00"
     document.getElementById("startStop").innerHTML = "Start"
 
     window.clearInterval(interval);
@@ -276,9 +276,9 @@ conversionMissedButton1.addEventListener("click", () => {
     tryButton2.disabled = false
     tryButton2.style.cssText = "background-color: white"
     conversionButton2.disabled = true
-    conversionButton2.style.cssText = "background-color: white"
+    conversionButton2.style.cssText = "background-color: lightgrey"
     conversionMissedButton2.disabled = true
-    conversionMissedButton2.style.cssText = "background-color: white"
+    conversionMissedButton2.style.cssText = "background-color: lightgrey"
     penaltyButton2.disabled = false
     penaltyButton2.style.cssText = "background-color: white"
     dropGoalButton2.disabled = false
